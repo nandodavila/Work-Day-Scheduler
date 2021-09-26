@@ -1,7 +1,7 @@
 // var timeBlockTimes = moment().startOf('day').format('h:00 a');
 var moment = moment();
 var saveBtn = $('.save')
-// var formInput = $('.form-1')
+var formInput = $('.form-1')
 var formLocal = []
 
 var currentDay = moment.format('dddd, MMMM YYYY');
@@ -10,6 +10,7 @@ $('#currentDay').text(currentDay);
 var currentHour = moment.format('h:00 a');
 
 console.log(currentHour);
+console.log(formInput)
 
 function timeBlocks() {
     var hoursInDay = 24;
@@ -37,10 +38,10 @@ function getFormInput () {
 function setFormInput() {
     saveBtn.on('click', function(event) {
         event.preventDefault();
-        if ($('.form-1') = null) {
+        if (formInput = null) {
             alert('nothing to save')
         } else {
-            formLocal.push($('.form-1'))
+            formLocal.push(formInput)
             console.log(formLocal)
         }
     })
